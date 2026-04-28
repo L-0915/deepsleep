@@ -319,6 +319,7 @@ deepsleep/
 
 ### LoRA 数据
 - 32,333 条单轮对话数据 (心理咨询类)
+
 以上数据大全部来源于[魔塔创空间](https://www.modelscope.cn/)
 ---
 
