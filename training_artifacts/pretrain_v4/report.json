@@ -1,0 +1,27 @@
+{
+  "total_steps": 11718,
+  "total_tokens": 191987712,
+  "total_time_hours": 2.2,
+  "total_samples": 1500000,
+  "best_train_loss": 2.936742,
+  "final_train_loss": 3.001596,
+  "best_eval_loss": 2.781907,
+  "final_eval_loss": 2.731087,
+  "final_eval_ppl": 15.35,
+  "tokens_per_second": 24280,
+  "total_params_M": 201.6,
+  "active_params_excl_emb_M": 68.4,
+  "model_arch": "DeepSleep Pure MoE v3",
+  "config": {
+    "d_model": 768,
+    "n_layers": 8,
+    "n_heads": 8,
+    "n_kv_heads": 4,
+    "num_experts": 6,
+    "top_k": 2,
+    "moe_intermediate_size": 1472,
+    "layer_pattern": "all_moe",
+    "vocab_size": 32000,
+    "seq_len": 512
+  }
+}

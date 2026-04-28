@@ -1,0 +1,22 @@
+{
+  "total_steps": 2868,
+  "total_epochs": 3,
+  "total_train_samples": 30595,
+  "total_eval_samples": 1610,
+  "total_tokens": 35241984,
+  "total_time_hours": 0.19,
+  "total_time_minutes": 11,
+  "final_train_loss": 5.2011,
+  "final_eval_loss": 4.437,
+  "best_eval_loss": 4.4398,
+  "tok_per_second": 52564,
+  "base_model_params_M": 201.6,
+  "trainable_params_M": 0.69,
+  "trainable_ratio_pct": 0.34,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "learning_rate": 5e-05,
+  "batch_size": 16,
+  "seq_len": 768,
+  "model_arch": "DeepSleep MoE + LoRA"
+}

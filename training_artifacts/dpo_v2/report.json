@@ -1,0 +1,13 @@
+{
+  "total_steps": 320,
+  "total_epochs": 1,
+  "total_samples": 5135,
+  "total_time_minutes": 4,
+  "final_train_loss": 0.6238,
+  "final_eval_loss": 0.6275,
+  "final_eval_accuracy": 0.636,
+  "final_eval_margin": 0.1528,
+  "best_eval_loss": 0.6294,
+  "beta": 0.1,
+  "learning_rate": 5e-07
+}

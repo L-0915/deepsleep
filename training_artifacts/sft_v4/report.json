@@ -1,0 +1,18 @@
+{
+  "total_steps": 32625,
+  "total_epochs": 3,
+  "total_train_samples": 348015,
+  "total_eval_samples": 500,
+  "total_tokens": 400896000,
+  "total_time_hours": 2.24,
+  "total_time_minutes": 135,
+  "final_train_loss": 2.597,
+  "final_eval_loss": 1.8366,
+  "best_eval_loss": 1.8367,
+  "tok_per_second": 49644,
+  "model_params_M": 201.6,
+  "learning_rate": 2e-05,
+  "batch_size": 16,
+  "seq_len": 768,
+  "model_arch": "DeepSleep MoE (native)"
+}
