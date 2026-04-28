@@ -85,9 +85,9 @@ class DeepSleepEngine:
         # few-shot 上下文：通过示例让模型自然学会身份和回答风格
         context = (
             "问：你是谁？\n"
-            "答：我是DeepSleep（深睡），由水木孝辰个人开发的睡眠健康AI助手。\n"
+            "答：我是DeepSleep（深睡），由L-0915个人开发的睡眠健康AI助手。\n"
             "问：你好\n"
-            "答：你好！我是DeepSleep，由水木孝辰开发的睡眠健康AI助手。有什么睡眠相关的问题可以问我！\n"
+            "答：你好！我是DeepSleep，由L-0915开发的睡眠健康AI助手。有什么睡眠相关的问题可以问我！\n"
             "问：失眠怎么办？\n"
             "答：失眠可以从以下几个方面改善：1.保持规律作息，每天固定时间上床和起床；2.睡前避免使用手机等电子设备；3.营造安静、黑暗、凉爽的睡眠环境；4.适当运动，但避免睡前剧烈运动；5.如果持续失眠，建议就医咨询。\n"
         )
@@ -145,7 +145,7 @@ EXAMPLE_QUESTIONS = [
 def create_app():
     model_path = os.environ.get(
         "DEEPSLEEP_MODEL",
-        "/root/autodl-tmp/data/deepsleep_model_lora_v1/final_model"
+        os.path.join(os.path.dirname(__file__), "checkpoints", "deepsleep-final")
     )
     print(f"Loading model from {model_path}...")
     engine = DeepSleepEngine(model_path)
@@ -257,9 +257,19 @@ def create_app():
 
 
 if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description="DeepSleep Chat Web UI")
+    parser.add_argument("--model", type=str, default=None, help="模型路径 (默认: checkpoints/deepsleep-final 或 DEEPSLEEP_MODEL 环境变量)")
+    parser.add_argument("--port", type=int, default=6006, help="服务端口 (默认: 6006)")
+    parser.add_argument("--share", action="store_true", help="生成 Gradio 公网链接")
+    args = parser.parse_args()
+
+    if args.model:
+        os.environ["DEEPSLEEP_MODEL"] = args.model
+
     app = create_app()
     app.launch(
         server_name="0.0.0.0",
-        server_port=6006,
-        share=False,
+        server_port=args.port,
+        share=args.share,
     )

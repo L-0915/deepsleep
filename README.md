@@ -69,7 +69,7 @@ DeepSleepForCausalLM
 
 ```bash
 # 克隆仓库
-git clone https://github.com/shuimu-xiaochen/deepsleep.git
+git clone https://github.com/L-0915/deepsleep.git
 cd deepsleep
 
 # 创建虚拟环境
@@ -82,14 +82,20 @@ pip install -r requirements.txt
 
 ### 2. 下载模型权重
 
-从 HuggingFace 下载训练好的模型权重：
+从 [HuggingFace](https://huggingface.co/L-0915/deepsleep) 或 [GitHub Release](https://github.com/L-0915/deepsleep/releases) 下载模型权重：
 
 ```bash
-# 创建模型目录
-mkdir -p checkpoints/deepsleep-final
+# 方式一: 从 HuggingFace 下载
+pip install huggingface_hub
+huggingface-cli download L-0915/deepsleep --local-dir checkpoints/deepsleep-final
 
-# 下载（或手动下载后放入该目录）
-# 需要的文件: config.json, pytorch_model.bin, tokenizer.json, tokenizer_config.json
+# 方式二: 手动下载后放入该目录
+mkdir -p checkpoints/deepsleep-final
+# 将以下文件放入 checkpoints/deepsleep-final/ 目录:
+#   config.json (820B)
+#   pytorch_model.bin (770MB)
+#   tokenizer.json (1.7MB)
+#   tokenizer_config.json (501B)
 ```
 
 ### 3. 启动 Web 演示
@@ -334,6 +340,6 @@ MIT License
 
 <div align="center">
 
-**DeepSleep** © 2026 by 水木孝辰
+**DeepSleep** © 2026 by L-0915
 
 </div>
