@@ -134,7 +134,7 @@ Stage 3: 偏好对齐 (DPO)
 
 Stage 4: LoRA 微调
 ├── 数据: 32,333 条单轮对话
-├── 配置: r=16, alpha=32, lr=5e-5, 3 epochs
+├── 配置: r=8, alpha=32, lr=5e-5, 3 epochs
 ├── 耗时: ~11 分钟
 └── 结果: train loss 5.20, eval loss 4.44
 ```
@@ -296,7 +296,7 @@ deepsleep/
 | SFT | ~10 GB (BF16) | ~2 小时 |
 | DPO | ~4 GB (BF16, 需同时加载 policy + ref) | ~4 分钟 |
 | LoRA | ~4 GB (BF16) | ~11 分钟 |
-| **合计** | **RTX 3090 (24GB) 足够** | **~4 小时** |
+| **合计** | **RTX 5090 (24GB) 足够** | **~4 小时** |
 
 ---
 
