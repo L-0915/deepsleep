@@ -116,9 +116,9 @@ DeepSleep 的训练分为四个阶段，全部在单张 RTX 3090 上完成：
 ```
 Stage 1: 预训练 (Pretrain)
 ├── 数据: IndustryCorpus 医学语料 (150万条, 中英双语)
-├── 配置: batch=16, seq_len=512, lr=1e-3, 3 epochs
+├── 配置: batch=16, seq_len=512, lr=1e-3, 1 epochs
 ├── 耗时: ~1.5 小时
-└── 结果: loss 8.4 → 3.0
+└── 结果: loss 10 → 3.0
 
 Stage 2: 监督微调 (SFT)
 ├── 数据: 中文医疗问答指令数据
