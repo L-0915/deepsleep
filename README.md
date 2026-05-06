@@ -111,7 +111,7 @@ python app.py
 
 ## 📊 训练流程
 
-DeepSleep 的训练分为四个阶段，全部在单张 RTX 3090 上完成：
+DeepSleep 的训练分为四个阶段，全部在单张 RTX 5090 上完成：
 
 ```
 Stage 1: 预训练 (Pretrain)
@@ -129,7 +129,7 @@ Stage 2: 监督微调 (SFT)
 Stage 3: 偏好对齐 (DPO)
 ├── 数据: 5,405 条医学 DPO 对 (5,351 通用 + 54 睡眠领域)
 ├── 配置: batch=16, seq_len=768, lr=5e-7, beta=0.1, 1 epoch
-├── 耗时: ~4 分钟
+├── 耗时: ~8 分钟
 └── 结果: train loss 0.624, eval accuracy 63.6%
 
 Stage 4: LoRA 微调
